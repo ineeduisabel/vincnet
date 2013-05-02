@@ -1,0 +1,21 @@
+<%= form_for(@broad) do |f| %>
+  <% if @broad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@broad.errors.count, "error") %> prohibited this broad from being saved:</h2>
+
+      <ul>
+      <% @broad.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

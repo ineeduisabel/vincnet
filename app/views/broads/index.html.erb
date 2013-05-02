@@ -1,0 +1,23 @@
+<h1>Listing broads</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @broads.each do |broad| %>
+  <tr>
+    <td><%= broad.name %></td>
+    <td><%= link_to 'Show', broad %></td>
+    <td><%= link_to 'Edit', edit_broad_path(broad) %></td>
+    <td><%= link_to 'Destroy', broad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Broad', new_broad_path %>

@@ -1,0 +1,2 @@
+module BroadsHelper
+end
